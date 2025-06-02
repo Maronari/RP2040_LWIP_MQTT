@@ -8,9 +8,9 @@ if(NOT DEFINED PICO_SDK_PATH)
 endif()
 
 
-include(rp2040_hat_lwip_c-patch.cmake)
+# include(rp2040_hat_lwip_c-patch.cmake)
 include(pico_sdk_import.cmake)
-include(rp2040_hat_lwip_c_sdk_version.cmake)
+# include(rp2040_hat_lwip_c_sdk_version.cmake)
 
 # Set project name
 set(PROJECT_NAME RP2040-HAT-LWIP-C)
@@ -25,7 +25,7 @@ set(CMAKE_CXX_STANDARD 17)
 pico_sdk_init()
 
 # Set ethernet chip
-set(WIZNET_CHIP W5100S)
+set(WIZNET_CHIP W5500)
 
 if(${WIZNET_CHIP} STREQUAL W5100S)
     add_definitions(-D_WIZCHIP_=W5100S)

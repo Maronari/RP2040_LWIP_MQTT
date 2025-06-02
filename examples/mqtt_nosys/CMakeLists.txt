@@ -1,4 +1,4 @@
-set(TARGET_NAME w5x00_dhcp_dns)
+set(TARGET_NAME w5x00_mqtt_nosys)
 
 add_executable(${TARGET_NAME}
         ${TARGET_NAME}.c
@@ -16,6 +16,8 @@ target_link_libraries(${TARGET_NAME} PRIVATE
         ETHERNET_FILES
         IOLIBRARY_FILES
         LWIP_FILES
+        pico_lwip_mqtt
+        hardware_adc
         )
 
 pico_enable_stdio_usb(${TARGET_NAME} 1)
